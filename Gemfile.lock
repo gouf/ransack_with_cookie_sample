@@ -1,3 +1,15 @@
+GIT
+  remote: git://github.com/activerecord-hackery/ransack.git
+  revision: 6d31b6585d0700337fb13df983fc13a34a5e2074
+  branch: rails-4.2
+  specs:
+    ransack (1.2.4)
+      actionpack (= 4.2)
+      activerecord (= 4.2)
+      activesupport (= 4.2)
+      i18n
+      polyamorous (~> 1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -151,6 +163,8 @@ GEM
     parser (2.2.0.2)
       ast (>= 1.1, < 3.0)
     pg (0.18.1)
+    polyamorous (1.1.0)
+      activerecord (>= 3.0)
     powerpack (0.1.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -323,6 +337,7 @@ DEPENDENCIES
   pry-coolline
   pry-rails
   rails (= 4.2.0)
+  ransack!
   rb-readline
   rspec-rails
   rubocop
