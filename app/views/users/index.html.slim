@@ -1,5 +1,17 @@
 h1 Listing users
 
+= search_form_for @q do |f|
+  = f.label :name
+  = f.search_field :name_cont
+
+  = f.label :email
+  = f.search_field :email_cont
+
+  = f.label :gender
+  = f.search_field :gender_cont
+
+  = f.submit
+
 table
   thead
     tr
