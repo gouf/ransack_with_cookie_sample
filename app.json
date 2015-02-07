@@ -10,6 +10,6 @@
     "sharp",
     "tool"
   ],
-  "addons": [],
+  "addons": ["heroku-postgresql:hobby-dev"],
   "env": {}
 }
