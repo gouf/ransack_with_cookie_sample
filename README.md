@@ -1,28 +1,17 @@
-== README
+## Dependencies
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Database : Postgresql
 
-Things you may want to cover:
+## Ruby version
+1.9.x above (2.1.5 recommended)
 
-* Ruby version
+## Usage
 
-* System dependencies
+```
+bundle install
+rake db:create
+rake db:migrate
+rake db:seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+rails s # and access to localhost:3000/users/
+```
