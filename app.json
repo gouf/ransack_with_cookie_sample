@@ -1,0 +1,15 @@
+{
+  "name": "Ransack with cookie sample",
+  "description": "Remember the search criteria from cookie",
+  "repository": "https://github.com/gouf/ransack_with_cookie_sample",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  },
+  "keywords": [
+    "small",
+    "sharp",
+    "tool"
+  ],
+  "addons": [],
+  "env": {}
+}
