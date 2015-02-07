@@ -4,7 +4,17 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @q = User.ransack(params[:q])
+    query = params[:q]
+    # FIXME : This projects code is a sample. please fix and don't use eval.
+    query ||= eval(cookies[:recent_search_history].to_s)
+
+    @q = User.ransack(query)
+
+    search_history = {
+      value: params[:q],
+      expires: 1.minutes.from_now
+    }
+    cookies[:recent_search_history] = search_history if params[:q].present?
     @users = @q.result
   end
 
