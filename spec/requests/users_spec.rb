@@ -1,10 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-  describe 'GET /users' do
-    it 'works! (now write some real specs)' do
-      get users_path
-      expect(response).to have_http_status(200)
+  describe 'User#index' do
+    subject { response.cookies['recent_search_history'] }
+
+    describe 'empty params[:q]' do
+      before { get users_path }
+
+      it { is_expected.to be_nil }
+    end
+
+    describe 'set some params[:q]' do
+      before { get users_path, q: 'my' }
+
+      it { is_expected.to_not be_nil }
+      it { is_expected.to eq 'my' }
     end
   end
 end
