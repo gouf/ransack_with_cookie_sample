@@ -5,3 +5,5 @@ AllCops:
     - Guardfile
     - bin/*
     - vendor/**/*
+    - config/**/*
+    - db/**/*
